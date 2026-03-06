@@ -1,0 +1,190 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-06",
+  "destinations": [
+    {
+      "slug": "tokio",
+      "region": "ASIA",
+      "country": "Japón",
+      "currency": "JPY",
+      "locale": "ja-JP",
+      "priceFrom": 450000,
+      "headline": "Tokio: Donde el Futuro Huele a Ramen y el Pasado Toca la Campana del Templo",
+      "subheadline": "Una metrópolis de 14 millones de voces que, al amanecer, se convierte en silencio de bambú.",
+      "body": [
+        "El primer trago de café en un kissaten en Ginza. El pitido exacto del Shinkansen al salir de la estación. El olor a madera de cedro en un templo de Asakusa a las 6 de la mañana, cuando todavía no hay turistas. Eso es Tokio.",
+        "En 2026, la ciudad vive su mejor momento: el PokéPark Kanto abre sus puertas en primavera, los barrios de Yanaka y Shimokitazawa lideran el turismo lento y los hoteles boutique de Shinjuku compiten con diseño que haría llorar a los estudios de Milán.",
+        "Y luego está la comida. No ramen genérico: caldo de hueso de cerdo cocido 18 horas, noodles hechos a mano al mediodía, una yema de huevo confitada flotando en la superficie. No hay nada casual en Tokio."
+      ],
+      "highlights": [
+        "🌸 Temporada Hanami (Mar–Abr): cerezos en Ueno Park sin aglomeraciones con nuestros pases de acceso temprano",
+        "🏯 Tour privado Asakusa + Senso-ji al amanecer — máximo 8 personas",
+        "🍜 Masterclass de ramen con chef Michelin en Shinjuku",
+        "🚄 Shinkansen pass 14 días incluido en paquetes premium",
+        "🎮 Entradas prioritarias PokéPark Kanto sin cola — exclusivo 2026"
+      ],
+      "cta": {
+        "text": "Reservar mi viaje a Tokio →",
+        "url": "/destinos/tokio#reservar"
+      },
+      "seo": {
+        "title": "Viaje a Tokio 2026 — Itinerarios, Hoteles y Tours Exclusivos | EuroAsia",
+        "metaDescription": "Descubre Tokio en 2026: ruta Hanami, PokéPark Kanto, ramen Michelin y hoteles boutique. Paquetes desde ¥450,000 por persona.",
+        "keywords": [
+          "viaje a Japón 2026",
+          "viaje a Tokio 2026",
+          "ruta por Japón 2026",
+          "PokéPark Kanto Tokio 2026",
+          "hoteles de lujo en Tokio",
+          "mejor época para viajar a Japón",
+          "vacaciones en Japón 2026",
+          "tours Japón primavera cerezos"
+        ]
+      },
+      "og": {
+        "title": "Tokio 2026: Futuro, Silencio y Ramen Perfecto",
+        "description": "Itinerarios exclusivos en Tokio para 2026. Hanami, PokéPark Kanto y hoteles boutique de diseño.",
+        "image": "/og/tokio.jpg"
+      },
+      "imageAlt": "Vista panorámica de Tokio al atardecer con el Monte Fuji al fondo, cerezos en flor en primer plano y las luces de Shinjuku iluminando el cielo oscuro."
+    },
+    {
+      "slug": "bali",
+      "region": "ASIA",
+      "country": "Indonesia",
+      "currency": "IDR",
+      "locale": "id-ID",
+      "priceFrom": 18500000,
+      "headline": "Bali: El Ritual de los Dioses que También Acepta tu Tarjeta de Crédito",
+      "subheadline": "Arrozales que llueven en terrazas de esmeralda. Templos que flotan sobre el océano. Y un silencio que solo interrumpe el gong del amanecer.",
+      "body": [
+        "Hay un olor específico en Bali: incienso mezclado con tierra húmeda y jazmín recién cortado. Lo encuentras en las ofrendas de canang sari que cada balinesa deja al amanecer en el umbral de su puerta. No es para turistas. Es para los dioses.",
+        "Ubud huele diferente por las mañanas. El míster al atravesar los arrozales de Tegalalang te envuelve antes de que el sol haya calentado las piedras volcánicas. Es el momento perfecto para una clase de yoga que no se parece en nada a lo que haces en casa.",
+        "Para 2026, los mejores resorts de Canggu y Seminyak han apostado por arquitectura de bambú certificada, detox digitales reales y menús de cocina balinesa auténtica — no la versión para extranjeros."
+      ],
+      "highlights": [
+        "🌾 Tour privado sunrise en Tegalalang (antes de las 7am, sin multitudes)",
+        "🛕 Ceremonia Kecak al atardecer en Uluwatu — entrada preferencial",
+        "🧘 Retiro de yoga y meditación 3 noches en Ubud (certificado)",
+        "🌊 Surf para principiantes en Seminyak con instructores locales certificados",
+        "🍃 Menú degustación de cocina balinesa tradicional en villa privada"
+      ],
+      "cta": {
+        "text": "Despertar en Bali este 2026 →",
+        "url": "/destinos/bali#reservar"
+      },
+      "seo": {
+        "title": "Viaje a Bali 2026 — Ubud, Canggu y Templos Sagrados | EuroAsia",
+        "metaDescription": "Bali en 2026: arrozales de Tegalalang, retiros de yoga en Ubud y templos flotantes. Tours desde Rp 18.500.000 con todo incluido.",
+        "keywords": [
+          "viaje a Bali 2026",
+          "vacaciones en Bali Indonesia",
+          "tours Bali Ubud Canggu",
+          "retiro yoga Bali 2026",
+          "mejores resorts Bali sostenibles",
+          "viajes sostenibles Asia 2026",
+          "Tegalalang arrozales tour",
+          "templos Bali viaje espiritual"
+        ]
+      },
+      "og": {
+        "title": "Bali 2026: Dioses, Arrozales y Yoga al Amanecer",
+        "description": "Retiros de yoga en Ubud, arrozales de Tegalalang y templos de Uluwatu. Tu Bali más auténtico.",
+        "image": "/og/bali.jpg"
+      },
+      "imageAlt": "Terrazas de arroz de Tegalalang en Bali al amanecer, envueltas en bruma tropical con un templo balinés en silueta al fondo y arrozales de color esmeralda escalonados hasta el valle."
+    },
+    {
+      "slug": "roma",
+      "region": "EUROPE",
+      "country": "Italia",
+      "currency": "EUR",
+      "locale": "it-IT",
+      "priceFrom": 980,
+      "headline": "Roma: Dos Mil Años de Historia que Saben a Cacio e Pepe",
+      "subheadline": "Una ciudad donde cada piedra tiene apellido y cada plato es un tratado de filosofía.",
+      "body": [
+        "Hay un adoquín en el Campo de' Fiori que todavía huele a laurel. A las 7 de la mañana, cuando los mercaderes llegan con quesos y higos, Roma es solo de los romanos — y de quien madruga.",
+        "En 2026, Roma vive un Renacimiento silencioso: los barrios de Pigneto y Ostiense están redefiniendo la escena gastronómica italiana sin perder autenticidad. Un cacio e pepe preparado en las últimas tres generaciones de la misma familia en Trastevere cuesta lo mismo que un latte en cualquier aeropuerto europeo.",
+        "El Coliseo al atardecer, cuando el travertino se vuelve ámbar y las sombras dibujan arcos sobre el pavimento antiguo. Esa imagen vale más que cualquier filtro."
+      ],
+      "highlights": [
+        "🏛️ Acceso VIP al Coliseo al amanecer — antes de apertura oficial, máximo 10 personas",
+        "🍝 Clase magistral de pasta fresca con una nonna en Trastevere",
+        "🍷 Cata maridaje de vinos DOC en bodega subterránea de los Castelli Romani",
+        "🛵 Tour Vespa Slow Travel por Appia Antica y barrios off-the-beaten-path",
+        "🎨 Acceso privado nocturno a los Museos Vaticanos (cupo máximo 20 personas)"
+      ],
+      "cta": {
+        "text": "Reservar mi escapada a Roma →",
+        "url": "/destinos/roma#reservar"
+      },
+      "seo": {
+        "title": "Viaje a Roma 2026 — Coliseo VIP, Gastronomía y Slow Travel | EuroAsia",
+        "metaDescription": "Roma 2026: acceso VIP al Coliseo, pasta con nonna en Trastevere y vinos DOC. Paquetes desde €980 con ETIAS incluido.",
+        "keywords": [
+          "tours combinados Roma Atenas 2026",
+          "viaje Roma Italia 2026",
+          "circuitos Italia y Grecia 2026",
+          "gastronomía en Roma 2026",
+          "slow travel Italia",
+          "requisito ETIAS 2026",
+          "itinerario personalizado Italia",
+          "Coliseo tour privado Roma"
+        ]
+      },
+      "og": {
+        "title": "Roma 2026: Historia, Gastronomía y el Coliseo Solo Para Ti",
+        "description": "Acceso VIP al Coliseo, pasta en Trastevere y slow travel por los barrios más auténticos de Roma.",
+        "image": "/og/roma.jpg"
+      },
+      "imageAlt": "El Coliseo de Roma iluminado en tonos ámbar al atardecer, con adoquines mojados reflejando las luces de la ciudad, una mesa con pasta fresca y vino chianti en primer plano."
+    },
+    {
+      "slug": "santorini",
+      "region": "EUROPE",
+      "country": "Grecia",
+      "currency": "EUR",
+      "locale": "el-GR",
+      "priceFrom": 1590,
+      "headline": "Santorini: El Azul Más Profundo que Has Visto en tu Vida Huele a Sal y Tomillo Seco",
+      "subheadline": "Donde el Mar Egeo decide cada mañana el tono exacto del cielo — y siempre acierta.",
+      "body": [
+        "Oia a las 5:30 de la mañana. El faro todavía encendido. El Egeo es azul negro. En diez minutos pasará por todas las gradaciones del cuadro de Turner hasta convertirse en ese turquesa eléctrico que no existe en ninguna otra coordenada del planeta.",
+        "Las cúpulas azules de Fira y Oia no son una postal: son la consecuencia de una ley municipal de 1935 que obligó a los isleños a encalar sus casas con cal viva. El color azul lo eligieron para refrescar el interior. El resultado fue uno de los paisajes más fotografiados de la Tierra.",
+        "Para 2026, Santorini apuesta por el slow tourism: alojamientos cueva de diseño en la caldera, cruceros en caique tradicional al volcán, mariscos sobre brasas frente al mar en Amoudi Bay."
+      ],
+      "highlights": [
+        "🌅 Amanecer privado en Oia con cámara y fotógrafo profesional incluido",
+        "⛵ Crucero en caique al volcán Nea Kameni con snorkel en aguas termales",
+        "🦞 Cena de mariscos en Amoudi Bay reservada solo para nuestros viajeros",
+        "🏛️ Excursión a Akrotiri — la 'Pompeya del Egeo' — con arqueólogo guía",
+        "🍷 Cata de vino Assyrtiko en viña volcánica al atardecer"
+      ],
+      "cta": {
+        "text": "Vivir Santorini en primavera 2026 →",
+        "url": "/destinos/santorini#reservar"
+      },
+      "seo": {
+        "title": "Viaje a Santorini 2026 — Oia, Caldera y Cruceros Volcánicos | EuroAsia",
+        "metaDescription": "Santorini 2026: amanecer en Oia, crucero al volcán y mariscos en Amoudi Bay. Paquetes desde €1.590. ETIAS info incluida.",
+        "keywords": [
+          "viaje a Santorini 2026",
+          "cruceros Islas Griegas 2026",
+          "circuitos Italia y Grecia 2026",
+          "tour 15 días Roma Atenas Mykonos",
+          "viaje de lujo Italia y Grecia",
+          "mejores paquetes turísticos Grecia 2026",
+          "Oia Santorini amanecer tour",
+          "requisito ETIAS 2026 Grecia"
+        ]
+      },
+      "og": {
+        "title": "Santorini 2026: El Azul Más Profundo del Egeo",
+        "description": "Amanecer en Oia, crucero volcánico y mariscos frente al caldera. Tu Santorini sin filtros.",
+        "image": "/og/santorini.jpg"
+      },
+      "imageAlt": "Vista panorámica de Santorini al atardecer con cúpulas azules de Oia sobre el acantilado de la caldera, el Mar Egeo en tonos dorados y turquesa en el horizonte, flores de buganvilla rosas en primer plano."
+    }
+  ]
+}
