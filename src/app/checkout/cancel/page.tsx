@@ -10,7 +10,7 @@ import Link from "next/link";
 import { getTripById } from "@/lib/trips";
 
 export const metadata: Metadata = {
-    title: "Reserva Cancelada — EuroAsia Viajes",
+    title: "Reserva Cancelada — Traza Travel Viajes",
     description: "No se realizó ningún cargo. Puedes intentarlo de nuevo cuando quieras.",
 };
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { formatPrice } from "@/lib/formatPrice";
 import CheckoutButton from "@/components/payment/CheckoutButton";
@@ -106,7 +107,7 @@ export default function TravelCard({
             }}
         >
             {/* ── Image container ── */}
-            <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10" }}>
+            <Link href={`/tour/${id}`} className="relative w-full overflow-hidden block group-hover:cursor-pointer" style={{ aspectRatio: "16/10" }}>
                 {/* Skeleton shimmer while image loads */}
                 {!imgLoaded && (
                     <div
@@ -137,37 +138,24 @@ export default function TravelCard({
 
                 {/* Top badges row */}
                 <div className="absolute top-3 left-3 right-3 flex items-start justify-between gap-2 z-10">
-                    {/* Promo badge */}
-                    {badge ? (
-                        <span
-                            className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full"
-                            style={{
-                                background: "linear-gradient(135deg, #f4b942, #e8a020)",
-                                color: "#0a0f1e",
-                            }}
-                        >
-                            {badge}
-                        </span>
-                    ) : (
-                        <span aria-hidden="true" />
-                    )}
-
                     {/* Region badge (top-right) */}
                     <RegionBadge region={region} />
                 </div>
-            </div>
+            </Link>
 
             {/* ── Card body ── */}
             <div className="flex flex-col gap-3 p-4 flex-1">
                 {/* Destination info */}
                 <div className="flex items-start justify-between gap-2">
                     <div className="flex flex-col gap-0.5">
-                        <h3
-                            className="font-bold text-white leading-tight text-base"
-                            style={{ fontFamily: "var(--font-serif)" }}
-                        >
-                            {destination}
-                        </h3>
+                        <Link href={`/tour/${id}`}>
+                            <h3
+                                className="font-bold text-white leading-tight text-base hover:text-gray-300 transition-colors"
+                                style={{ fontFamily: "var(--font-serif)" }}
+                            >
+                                {destination}
+                            </h3>
+                        </Link>
                         <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
                             {country}
                         </p>
@@ -198,8 +186,16 @@ export default function TravelCard({
                     </span>
                 </div>
 
-                {/* CTA — Reservar Ahora */}
-                <CheckoutButton tripId={id} passengers={1} label="✈ Reservar Ahora" />
+                {/* CTA — Descubrir Itinerario */}
+                <div className="flex flex-col gap-2 mt-4 relative z-20 w-full rounded-2xl overflow-hidden p-[1px] bg-gradient-to-r from-gold-400 to-gold-600">
+                    <Link
+                        href={`/tour/${id}`}
+                        className="flex items-center justify-center w-full text-xs md:text-sm font-bold rounded-[15px] bg-navy-950 text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition-all duration-300 uppercase tracking-wider"
+                        style={{ minHeight: "44px" }}
+                    >
+                        Descubrir Itinerario
+                    </Link>
+                </div>
             </div>
         </article>
     );

@@ -17,7 +17,7 @@ import { getTripById } from "@/lib/trips";
 import { formatPrice } from "@/lib/formatPrice";
 
 export const metadata: Metadata = {
-    title: "¡Reserva Confirmada! — EuroAsia Viajes",
+    title: "¡Reserva Confirmada! — Traza Travel Viajes",
     description: "Tu pago fue procesado exitosamente. Pronto recibirás un email de confirmación.",
 };
 

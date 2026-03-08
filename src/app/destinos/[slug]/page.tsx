@@ -36,7 +36,7 @@ export async function generateMetadata({
             title: dest.og.title,
             description: dest.og.description,
             url: `${baseUrl}/destinos/${dest.slug}`,
-            siteName: "EuroAsia Viajes",
+            siteName: "Traza Travel Viajes",
             images: [
                 {
                     url: `${baseUrl}${dest.og.image}`,
@@ -126,7 +126,7 @@ export default async function DestinationPage({
                         className="font-bold text-lg leading-none"
                         style={{ fontFamily: "var(--font-serif)", color: "var(--color-gold-400)" }}
                     >
-                        EuroAsia
+                        Traza Travel
                     </span>
                 </a>
                 <RegionBadge region={dest.region} />
