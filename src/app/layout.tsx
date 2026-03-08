@@ -6,8 +6,20 @@ export const metadata: Metadata = {
   description:
     "Especialistas en el diseño de viajes de autor a Europa y Asia con la precisión que solo la anticipación puede ofrecer.",
   openGraph: {
-    title: "Traza Travel",
-    description: "Diseño de viajes de autor a Europa y Asia.",
+    title: "Traza Travel | Arquitectura Digital de Viajes",
+    description:
+      "Especialistas en el diseño de viajes de autor a Europa y Asia con la precisión que solo la anticipación puede ofrecer.",
+    url: "https://trazatravel.shop",
+    siteName: "Traza Travel",
+    images: [
+      {
+        url: "/Logo_traza_travel_agenciadeviajes.png",
+        width: 1200,
+        height: 630,
+        alt: "Traza Travel Logo",
+      },
+    ],
+    locale: "es_MX",
     type: "website",
   },
   icons: {
