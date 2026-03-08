@@ -169,14 +169,17 @@ export default function DestinationsGrid() {
 
                 {/* ── See More CTA ── */}
                 <div className="flex justify-center animate-fade-up">
-                    <button
+                    <a
                         id="btn-see-more-destinations"
+                        href="#destinos"
                         className="flex items-center gap-2 px-8 rounded-2xl font-semibold text-sm cursor-pointer transition-all"
                         style={{
                             minHeight: "52px",
                             background: "rgba(255,255,255,0.05)",
                             border: "1px solid rgba(255,255,255,0.12)",
                             color: "rgba(255,255,255,0.7)",
+                            textDecoration: "none",
+                            scrollBehavior: "smooth",
                         }}
                         onMouseEnter={(e) => {
                             e.currentTarget.style.background = "rgba(255,255,255,0.09)";
@@ -190,7 +193,7 @@ export default function DestinationsGrid() {
                         }}
                     >
                         Ver todos los destinos →
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
