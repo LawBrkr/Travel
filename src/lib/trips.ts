@@ -12,7 +12,7 @@ export interface Trip {
     name: string;
     destination: string;
     country: string;
-    region: "EUROPE" | "ASIA";
+    region: "EUROPE" | "ASIA" | "AFRICA";
     /** Price per person in the smallest currency unit (cents / yen / etc.) */
     priceUnit: number;
     /** ISO 4217 currency code */
@@ -26,6 +26,8 @@ export interface Trip {
     travelDates: string;
     /** Duration in nights */
     nights: number;
+    /** Whether international flights are included in the price */
+    flightIncluded: boolean;
     /** Detailed itinerary */
     itinerary?: string[];
     /** What is included */
@@ -54,8 +56,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🇪🇺",
-        "description": "Disfruta de este espectacular tour: Tour Europa Total con Vuelo. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": true,
+        "description": "De Madrid a Ámsterdam en un grand tour de 17 días: cruce el Viejo Continente con guía hispanohablante y vuelos redondos incluidos. Madrid, París, Venecia, Roma, Florencia y Barcelona en una sola experiencia arquitectónica.",
+        "travelDates": "Próximas salidas: Primavera 2027",
         "nights": 16,
         "itinerary": [
             "Día 1. México - Madrid: Encuentro en el aeropuerto CDMX 3 horas antes del vuelo trasatlántico. Noche a bordo.",
@@ -118,8 +121,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🇪🇺",
-        "description": "Disfruta de este espectacular tour: Tour Gran Vuelta por Europa con Vuelo 2026. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": true,
+        "description": "El itinerario más completo de Europa: 19 días desde Londres hasta Madrid, cruzando Londres, París, Zúrich, Venecia, Roma y Barcelona. Vuelo trasatlántico incluido desde la CDMX con aerolíneas de primera clase.",
+        "travelDates": "Salidas selectas: Abr, Jun, Sep 2027",
         "nights": 18,
         "itinerary": [
             "Día 1. México - Londres: Cita en aeropuerto CDMX 3 hrs antes del vuelo trasatlántico a Londres. Noche a bordo.",
@@ -183,8 +187,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🇪🇺",
-        "description": "Disfruta de este espectacular tour: Tour Escapada a Europa. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "De Madrid al corazón de París en 7 días de pura elegancia europea: paseos por la Gran Vía madrileña, el Valle del Loira y los bulevares iluminados de la Ciudad de la Luz. Ideal como primera incursión al continente.",
+        "travelDates": "Salidas disponibles: Mar – Oct 2027",
         "nights": 6,
         "itinerary": [
             "Día 1. Madrid: Llegada al aeropuerto de Madrid-Barajas. Traslado al hotel. Día libre para explorar.",
@@ -229,8 +234,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🌍",
-        "description": "Disfruta de este espectacular tour: Tour Paraíso Europeo. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "De Londres a Ámsterdam pasando por Bruselas, Brujas y La Haya: 10 días de arquitectura gótica, canales y diamantes. Crucero incluido por los canales del norte de Europa al final del recorrido.",
+        "travelDates": "Próxima salida: Mayo 2027",
         "nights": 9,
         "itinerary": [
             "Día 1. Londres: Llegada al aeropuerto de Heathrow. Traslado al hotel. Día libre para explorar la ciudad y pasear por el centro comercial.",
@@ -279,8 +285,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🍕",
-        "description": "Disfruta de este espectacular tour: Tour Escapada a Italia. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "Roma, Florencia, Venecia y Milán en una semana intensa de arte y gastronomía: desde la Capilla Sixtina hasta el Ponte Vecchio. Recorra la Bota con guía hispanohablante y cristal de Murano de primera mano.",
+        "travelDates": "Salidas: Abr – Nov 2027",
         "nights": 6,
         "itinerary": [
             "Día 1. Ciudad de Origen – Roma: Llegada a Roma. Traslado al hotel. Tiempo libre. Excursión opcional nocturna \"Roma Nocturna\" (Piazza Navona, Fontana de Trevi).",
@@ -326,8 +333,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🇪🇺",
-        "description": "Disfruta de este espectacular tour: Tour Europa Magnífica. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "París, Brujas, Bruselas, Ámsterdam y Frankfurt en 8 días de lujo sin escala: crucero por el Rin y vistas al Valle de Loreley incluidos. El circuito más europeo para el viajero que exige lo extraordinario.",
+        "travelDates": "Próxima salida: Verano 2027",
         "nights": 7,
         "itinerary": [
             "Día 1. Ciudad de Origen – París: Llegada a París. Traslado al hotel. Tiempo libre. Opcional: \"Iluminaciones de París\".",
@@ -380,8 +388,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🎌",
-        "description": "Disfruta de este espectacular tour: Tour Japón, Camino del Samurái con Vuelo. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": true,
+        "description": "Siga la ruta del Samurái desde Tokio hasta los santuarios de Hiroshima y los mercados de Osaka. 12 días en tren bala atravesando la tierra de los cerezos en flor, con vuelos internacionales desde la CDMX.",
+        "travelDates": "Salidas selectas: Mar – May 2027",
         "nights": 11,
         "itinerary": [
             "Día 1. México – Tokio: Cita en el aeropuerto CDMX para abordar vuelo a Narita. Noche a bordo.",
@@ -435,8 +444,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🎌",
-        "description": "Disfruta de este espectacular tour: Tour Japón con Vuelo. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": true,
+        "description": "Tokio, Kioto y Nara en 8 días de inmersión cultural profunda: templos milenarios, geishas en el barrio Gion y el tren bala Nozomi incluido. Vuelo directo desde México con guía de habla hispana.",
+        "travelDates": "Próxima salida: Otoño 2027",
         "nights": 7,
         "itinerary": [
             "Día 1. México – Narita: Cita en el aeropuerto CDMX para abordar vuelo a Narita. Noche a bordo.",
@@ -487,8 +497,9 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🐉",
-        "description": "Disfruta de este espectacular tour: Tour Lo Mejor de China. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "Desde la Ciudad Prohibida de Beijing hasta la magia de Shanghái Disney: 9 días frente a la Gran Muralla, los Guerreros de Terracota y los jardines imperiales de Xi'an. China colosal, al alcance.",
+        "travelDates": "Salidas disponibles: Oct – Nov 2027",
         "nights": 8,
         "itinerary": [
             "Día 1. Beijing: Llegada al aeropuerto de Beijing. Traslado al hotel. Descanso o exploración libre de la ciudad.",
@@ -545,13 +556,14 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "name": "Tour Turquía con Vuelo 2026",
         "destination": "Tour Turquía con Vuelo 2026",
         "country": "Turquía",
-        "region": "EUROPE",
+        "region": "ASIA",
         "priceUnit": 3603686,
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🕌",
-        "description": "Disfruta de este espectacular tour: Tour Turquía con Vuelo 2026. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": true,
+        "description": "De Estambul al Bósforo, Capadocia y las terrazas termales de Pamukkale: 13 días entre dos continentes con vuelo redondo incluido. Vuele a la encrucijada del mundo donde Oriente y Occidente se fusionan.",
+        "travelDates": "Salidas selectas: Mar – Nov 2027",
         "nights": 12,
         "itinerary": [
             "Día 1. México – Estambul: Cita en el aeropuerto CDMX para vuelo a Estambul (escala en Cancún). Noche a bordo.",
@@ -606,13 +618,14 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "name": "Tour Turquía Clásico Libre",
         "destination": "Tour Turquía Clásico Libre",
         "country": "Turquía",
-        "region": "EUROPE",
+        "region": "ASIA",
         "priceUnit": 970631,
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🕌",
-        "description": "Disfruta de este espectacular tour: Tour Turquía Clásico Libre. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "Estambul, Capadocia, Éfeso y la Casa de la Virgen María en 10 días de absoluta libertad: piscinas termales de Pamukkale y el mercado de la seda de Bursa. Turquía profunda a su propio ritmo.",
+        "travelDates": "Disponibilidad: May – Oct 2027",
         "nights": 9,
         "itinerary": [
             "Día 1. Ciudad de Origen – Estambul: Llegada a Estambul. Recepción por asistente de habla hispana. Traslado al hotel. Día libre.",
@@ -665,13 +678,14 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
         "name": "Tour Egipto Clásico con Crucero en el Nilo",
         "destination": "Tour Egipto Clásico con Crucero en el Nilo",
         "country": "Egipto",
-        "region": "ASIA",
+        "region": "AFRICA",
         "priceUnit": 1970979,
         "currency": "MXN",
         "locale": "es-MX",
         "emoji": "🐪",
-        "description": "Disfruta de este espectacular tour: Tour Egipto Clásico con Crucero en el Nilo. Revisa el itinerario para más detalles de tu viaje.",
-        "travelDates": "Enero 2027 - Septiembre 2027",
+        "flightIncluded": false,
+        "description": "Navegue por el Nilo y descubra los secretos de Luxor y Aswan: pirámides de Guiza, el Valle de los Reyes y los colosos de Memnón en un solo crucero de 7 días. El faraón lo espera.",
+        "travelDates": "Salidas: Ene, Feb, Nov 2027",
         "nights": 6,
         "itinerary": [
             "Día 1. El Cairo: Llegada al aeropuerto de El Cairo. Asistencia y traslado al hotel. Tiempo libre en El Cairo (\"Madre del Mundo\"), a orillas del Nilo.",

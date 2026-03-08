@@ -19,15 +19,17 @@ const DESTINATIONS = Object.values(TRIPS_CATALOGUE).map((trip) => ({
     locale: trip.locale,
     description: trip.description,
     travelDates: trip.travelDates,
+    flightIncluded: trip.flightIncluded,
 }));
 
 // ─── Filter Tab ───────────────────────────────────────────────────────────────
-type Filter = "ALL" | "ASIA" | "EUROPE";
+type Filter = "ALL" | "ASIA" | "EUROPE" | "AFRICA";
 
 const FILTER_OPTIONS: { key: Filter; label: string; emoji: string }[] = [
     { key: "ALL", label: "Todos", emoji: "🌍" },
     { key: "EUROPE", label: "Europa", emoji: "🗼" },
     { key: "ASIA", label: "Asia", emoji: "🗾" },
+    { key: "AFRICA", label: "África", emoji: "🐪" },
 ];
 
 function FilterTabs({
@@ -150,7 +152,7 @@ export default function DestinationsGrid() {
                 <div
                     id="destinations-grid"
                     role="list"
-                    aria-label={`Destinos de ${activeFilter === "ALL" ? "Europa y Asia" : activeFilter === "EUROPE" ? "Europa" : "Asia"}`}
+                    aria-label={`Destinos: ${activeFilter === "ALL" ? "Todos" : activeFilter}`}
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
                 >
                     {filtered.map((dest, i) => (

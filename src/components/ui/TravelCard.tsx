@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { formatPrice } from "@/lib/formatPrice";
-import CheckoutButton from "@/components/payment/CheckoutButton";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 export interface TravelCardProps {
@@ -12,7 +11,7 @@ export interface TravelCardProps {
     id: string;
     destination: string;
     country: string;
-    region: "ASIA" | "EUROPE";
+    region: "ASIA" | "EUROPE" | "AFRICA";
     imageSrc: string;
     /** Duration in days */
     duration: number;
@@ -26,21 +25,24 @@ export interface TravelCardProps {
     description: string;
     /** Travel dates */
     travelDates: string;
+    /** Whether international flights are included */
+    flightIncluded: boolean;
 }
 
 // ─── Region Badge ─────────────────────────────────────────────────────────────
-function RegionBadge({ region }: { region: "ASIA" | "EUROPE" }) {
-    const isAsia = region === "ASIA";
+function RegionBadge({ region }: { region: "ASIA" | "EUROPE" | "AFRICA" }) {
+    const config = {
+        ASIA: { bg: "rgba(96,184,212,0.25)", color: "#8dd0e4", border: "rgba(96,184,212,0.4)", label: "Asia" },
+        EUROPE: { bg: "rgba(244,185,66,0.25)", color: "#f4b942", border: "rgba(244,185,66,0.4)", label: "Europa" },
+        AFRICA: { bg: "rgba(212,144,96,0.25)", color: "#e8a060", border: "rgba(212,144,96,0.4)", label: "África" },
+    };
+    const c = config[region];
     return (
         <span
-            style={{
-                backgroundColor: isAsia ? "rgba(96,184,212,0.25)" : "rgba(244,185,66,0.25)",
-                color: isAsia ? "#8dd0e4" : "#f4b942",
-                border: `1px solid ${isAsia ? "rgba(96,184,212,0.4)" : "rgba(244,185,66,0.4)"}`,
-            }}
+            style={{ backgroundColor: c.bg, color: c.color, border: `1px solid ${c.border}` }}
             className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full backdrop-blur-sm"
         >
-            {isAsia ? "Asia" : "Europa"}
+            {c.label}
         </span>
     );
 }
@@ -49,7 +51,7 @@ function RegionBadge({ region }: { region: "ASIA" | "EUROPE" }) {
 function DurationPill({ days }: { days: number }) {
     return (
         <span
-            className="text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm"
+            className="text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm shrink-0"
             style={{
                 background: "rgba(10,15,30,0.7)",
                 border: "1px solid rgba(255,255,255,0.12)",
@@ -61,13 +63,35 @@ function DurationPill({ days }: { days: number }) {
     );
 }
 
+// ─── Flight Badge ─────────────────────────────────────────────────────────────
+function FlightBadge({ included }: { included: boolean }) {
+    return (
+        <span
+            className="inline-flex items-center gap-1 text-[10px] font-semibold px-2.5 py-1 rounded-full"
+            style={
+                included
+                    ? {
+                        background: "rgba(10, 22, 50, 0.85)",
+                        color: "#8dd0e4",
+                        border: "1px solid rgba(96,184,212,0.35)",
+                    }
+                    : {
+                        background: "rgba(10,15,30,0.6)",
+                        color: "rgba(255,255,255,0.45)",
+                        border: "1px solid rgba(255,255,255,0.1)",
+                    }
+            }
+        >
+            <span aria-hidden="true">{included ? "✈️" : "🚌"}</span>
+            <span>{included ? "Vuelo Internacional Incluido" : "Experiencia Terrestre"}</span>
+        </span>
+    );
+}
+
 // ─── TravelCard ───────────────────────────────────────────────────────────────
 /**
  * TravelCard — individual destination card.
- * SKILL.md compliance:
- *  - CTA min-height 52px (≥ 44px touch target)
- *  - Uses next/image with loading="lazy" and fill
- *  - No horizontal overflow by design
+ * Mobile-first: title max 2 lines, leading-snug for tight mobile layout.
  */
 export default function TravelCard({
     id,
@@ -82,6 +106,7 @@ export default function TravelCard({
     badge,
     description,
     travelDates,
+    flightIncluded,
 }: TravelCardProps) {
     const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -138,7 +163,7 @@ export default function TravelCard({
 
                 {/* Top badges row */}
                 <div className="absolute top-3 left-3 right-3 flex items-start justify-between gap-2 z-10">
-                    {/* Region badge (top-right) */}
+                    {/* Region badge (top-left) */}
                     <RegionBadge region={region} />
                 </div>
             </Link>
@@ -147,31 +172,45 @@ export default function TravelCard({
             <div className="flex flex-col gap-3 p-4 flex-1">
                 {/* Destination info */}
                 <div className="flex items-start justify-between gap-2">
-                    <div className="flex flex-col gap-0.5">
-                        <Link href={`/tour/${id}`}>
+                    <div className="flex flex-col gap-0.5 min-w-0">
+                        <Link href={`/tour/${id}`} className="min-w-0">
                             <h3
-                                className="font-bold text-white leading-tight text-base hover:text-gray-300 transition-colors"
+                                className="font-bold text-white leading-snug text-base hover:text-gray-300 transition-colors line-clamp-2"
                                 style={{ fontFamily: "var(--font-serif)" }}
                             >
                                 {destination}
                             </h3>
                         </Link>
-                        <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
+                        <p className="text-xs truncate" style={{ color: "rgba(255,255,255,0.5)" }}>
                             {country}
                         </p>
                     </div>
                     <DurationPill days={duration} />
                 </div>
 
+                {/* Flight Badge */}
+                <div>
+                    <FlightBadge included={flightIncluded} />
+                </div>
+
                 {/* Description & Travel Dates */}
-                <div className="flex flex-col gap-1.5 mt-1">
-                    <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+                <div className="flex flex-col gap-1.5 mt-0.5">
+                    <p className="text-xs leading-relaxed line-clamp-3" style={{ color: "rgba(255,255,255,0.7)" }}>
                         {description}
                     </p>
                     <p className="text-[10px] font-bold tracking-wide uppercase" style={{ color: "var(--color-gold-400)" }}>
                         {travelDates}
                     </p>
                 </div>
+
+                {/* Urgency indicator */}
+                <p
+                    className="text-[10px]"
+                    style={{ color: "rgba(255,255,255,0.38)" }}
+                    aria-live="polite"
+                >
+                    ◆ Disponibilidad limitada: 8 lugares restantes
+                </p>
 
                 {/* Price row */}
                 <div className="flex items-baseline gap-1.5">
