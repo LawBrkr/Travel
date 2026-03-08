@@ -115,7 +115,7 @@ export default function TravelCard({
     return (
         <article
             id={`travel-card-${id}`}
-            className="group relative flex flex-col rounded-3xl overflow-hidden"
+            className="group relative flex flex-col rounded-3xl overflow-hidden cursor-pointer"
             style={{
                 background: "rgba(13,20,38,0.9)",
                 border: "1px solid rgba(255,255,255,0.07)",
@@ -131,8 +131,15 @@ export default function TravelCard({
                 e.currentTarget.style.boxShadow = "0 4px 32px rgba(0,0,0,0.4)";
             }}
         >
+            {/* ── Stretched link: makes the entire card clickable (z-10) ── */}
+            <Link
+                href={`/tour/${id}`}
+                aria-label={`Ver itinerario de ${destination}`}
+                className="absolute inset-0 z-10"
+                tabIndex={-1}
+            />
             {/* ── Image container ── */}
-            <Link href={`/tour/${id}`} className="relative w-full overflow-hidden block group-hover:cursor-pointer" style={{ aspectRatio: "16/10" }}>
+            <Link href={`/tour/${id}`} className="relative w-full overflow-hidden block z-20" style={{ aspectRatio: "16/10" }}>
                 {/* Skeleton shimmer while image loads */}
                 {!imgLoaded && (
                     <div
@@ -173,7 +180,7 @@ export default function TravelCard({
                 {/* Destination info */}
                 <div className="flex items-start justify-between gap-2">
                     <div className="flex flex-col gap-0.5 min-w-0">
-                        <Link href={`/tour/${id}`} className="min-w-0">
+                        <Link href={`/tour/${id}`} className="min-w-0 relative z-20">
                             <h3
                                 className="font-bold text-white leading-snug text-base hover:text-gray-300 transition-colors line-clamp-2"
                                 style={{ fontFamily: "var(--font-serif)" }}
@@ -227,13 +234,13 @@ export default function TravelCard({
 
                 {/* CTA — Descubrir Itinerario */}
                 <div className="flex flex-col gap-2 mt-4 relative z-20 w-full rounded-2xl overflow-hidden p-[1px] bg-gradient-to-r from-gold-400 to-gold-600">
-                    <Link
-                        href={`/tour/${id}`}
-                        className="flex items-center justify-center w-full text-xs md:text-sm font-bold rounded-[15px] bg-navy-950 text-gold-400 hover:bg-gold-500 hover:text-navy-950 transition-all duration-300 uppercase tracking-wider"
+                    <span
+                        className="flex items-center justify-center w-full text-xs md:text-sm font-bold rounded-[15px] bg-navy-950 text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all duration-300 uppercase tracking-wider pointer-events-none select-none"
                         style={{ minHeight: "44px" }}
+                        aria-hidden="true"
                     >
                         Descubrir Itinerario
-                    </Link>
+                    </span>
                 </div>
             </div>
         </article>
