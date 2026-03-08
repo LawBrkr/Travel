@@ -222,7 +222,7 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
             "Traza Travel no se hace responsable por cancelaciones derivadas de fuerza mayor.",
             "Una vez contratado el servicio, las tarifas no aceptan cambios ni reembolsos. Aplican restricciones."
         ],
-        "image": "https://images.unsplash.com/photo-1522814890654-e9102b4d956a?q=80&w=2000&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2000&auto=format&fit=crop"
     },
     "paraiso-europeo": {
         "id": "paraiso-europeo",
@@ -321,7 +321,7 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
             "Traza Travel no se hace responsable por cancelaciones derivadas de fuerza mayor.",
             "Una vez contratado el servicio, las tarifas no aceptan cambios ni reembolsos."
         ],
-        "image": "https://images.unsplash.com/photo-1529260830199-42b24126f198?q=80&w=2000&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=2000&auto=format&fit=crop"
     },
     "europa-magnifica": {
         "id": "europa-magnifica",
@@ -671,7 +671,7 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
             "Traza Travel no se hace responsable por cancelaciones derivadas de fuerza mayor.",
             "Una vez contratado el servicio, las tarifas no aceptan cambios ni reembolsos. Aplican restricciones."
         ],
-        "image": "https://images.unsplash.com/photo-1647413491410-67c0cd385e05?q=80&w=2000&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?q=80&w=2000&auto=format&fit=crop"
     },
     "egipto-clasico": {
         "id": "egipto-clasico",
@@ -734,7 +734,7 @@ export const TRIPS_CATALOGUE: Record<string, Trip> = {
             "Traza Travel no se hace responsable por cancelaciones derivadas de fuerza mayor (desastres naturales, guerras, cierres de fronteras, epidemias, quiebras, huelgas, conflictos bélicos/políticos).",
             "Una vez contratado el servicio, las tarifas no aceptan cambios ni reembolsos. Aplican restricciones."
         ],
-        "image": "https://images.unsplash.com/photo-1539650116574-8efeb43e2b08?q=80&w=2000&auto=format&fit=crop"
+        "image": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2000&auto=format&fit=crop"
     }
 };
 
