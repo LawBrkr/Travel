@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { getTripById } from "@/lib/trips";
 import { formatPrice } from "@/lib/formatPrice";
 import CheckoutButton from "@/components/payment/CheckoutButton";
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     const trip = getTripById(id);
     if (!trip) return { title: "Tour no encontrado" };
     return {
-        title: `${trip.name} - Viajes Premium`,
+        title: `${trip.name} - Traza Travel`,
         description: trip.description,
     };
 }
@@ -29,9 +30,45 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
     const heroImage = trip.image || "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000&auto=format&fit=crop";
 
     return (
-        <main className="min-h-screen bg-gray-50 flex flex-col pt-16 md:pt-20"> {/* Offset for navbar */}
+        <main className="min-h-screen bg-gray-50 flex flex-col">
+            {/* ── Detail Page Navbar ── */}
+            <header
+                className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-6 md:px-10"
+                style={{
+                    background: "rgba(250, 247, 240, 0.92)",
+                    backdropFilter: "blur(16px)",
+                    WebkitBackdropFilter: "blur(16px)",
+                    borderBottom: "1px solid rgba(11, 31, 64, 0.08)",
+                    boxShadow: "0 2px 20px rgba(11,31,64,0.06)",
+                }}
+            >
+                {/* Logo → Home */}
+                <Link href="/" aria-label="Volver al inicio — Traza Travel" className="shrink-0 flex items-center">
+                    <Image
+                        src="/Logo_traza_travel_agenciadeviajes.png"
+                        alt="Traza Travel"
+                        width={140}
+                        height={48}
+                        className="h-10 w-auto object-contain"
+                        priority
+                    />
+                </Link>
+
+                {/* Back link */}
+                <Link
+                    href="/"
+                    className="flex items-center gap-2 text-sm font-semibold transition-all"
+                    style={{ color: "var(--color-navy-950)", textDecoration: "none" }}
+                    onMouseOver={undefined}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M19 12H5M12 5l-7 7 7 7" />
+                    </svg>
+                    <span className="hidden sm:inline">Inicio</span>
+                </Link>
+            </header>
             {/* ── Hero Section ── */}
-            <section className="relative w-full h-[50vh] min-h-[400px] flex items-end justify-center pb-12 md:pb-16 bg-gray-900 overflow-hidden">
+            <section className="relative w-full h-[50vh] min-h-[400px] flex items-end justify-center pb-12 md:pb-16 bg-gray-900 overflow-hidden pt-16 md:pt-20">
                 <Image
                     src={heroImage}
                     alt={trip.name}
