@@ -38,6 +38,14 @@ interface CheckoutRequestBody {
 // ─── Handler ─────────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
+    // ── 0. Guard: Stripe not configured ───────────────────────────────────────
+    if (!stripe) {
+        return NextResponse.json(
+            { error: "Los pagos en línea no están disponibles en este momento." },
+            { status: 503 }
+        );
+    }
+
     try {
         // ── 1. Parse & validate request body ──────────────────────────────────
         let body: CheckoutRequestBody;

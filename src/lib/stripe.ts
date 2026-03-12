@@ -8,14 +8,11 @@
 
 import Stripe from "stripe";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-    throw new Error(
-        "[stripe.ts] STRIPE_SECRET_KEY is not defined. " +
-        "Copy .env.example → .env.local and fill in your Stripe keys."
-    );
-}
-
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-    apiVersion: "2026-02-25.clover",
-    typescript: true,
-});
+// Stripe is optional — if STRIPE_SECRET_KEY is not set, stripe will be null
+// and the checkout API will return a 503 until keys are configured.
+export const stripe = process.env.STRIPE_SECRET_KEY
+    ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+          apiVersion: "2026-02-25.clover",
+          typescript: true,
+      })
+    : null;
