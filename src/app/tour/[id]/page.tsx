@@ -228,13 +228,6 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
                                         <p className="text-xs font-medium text-amber-700/80">Con tarjetas participantes</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 px-5 py-4 bg-gradient-to-r from-red-50 to-rose-50 rounded-2xl border border-red-200/50">
-                                    <span className="text-3xl drop-shadow-sm">💸</span>
-                                    <div>
-                                        <p className="text-sm font-black text-red-900">5% OFF de Contado</p>
-                                        <p className="text-xs font-medium text-red-700/80">Ahorra en una exhibición</p>
-                                    </div>
-                                </div>
                             </div>
 
                             {/* CTA — WhatsApp (Stripe not configured yet) */}

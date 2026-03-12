@@ -65,9 +65,6 @@ export default function HeroCarousel() {
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-sm font-black tracking-wide bg-gradient-to-r from-yellow-400 to-amber-600 text-black shadow-[0_0_15px_rgba(250,204,21,0.4)] border border-yellow-300">
                                         <span className="text-sm md:text-base leading-none">💳</span> 12 MESES SIN INTERESES
                                     </span>
-                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-sm font-black tracking-wide bg-gradient-to-r from-red-500 to-rose-600 text-white shadow-[0_0_15px_rgba(239,68,68,0.4)] border border-red-400">
-                                        <span className="text-sm md:text-base leading-none">💸</span> 5% OFF CONTADO
-                                    </span>
                                 </div>
 
                                 {/* Hero Title with semi-transparent backdrop for extra legibility if needed, but the dark gradient is usually enough. Let's add a subtle text-shadow. */}
