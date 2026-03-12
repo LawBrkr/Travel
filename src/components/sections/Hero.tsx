@@ -33,7 +33,7 @@ export default function Hero() {
 
                 {/* Premium CTA */}
                 <a
-                    href="https://wa.me/5215666663950"
+                    href="https://wa.me/5215666673841"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent border border-gold-500 text-gold-400 font-medium tracking-widest uppercase text-xs md:text-sm hover:bg-gold-500 hover:text-navy-950 transition-all duration-300 backdrop-blur-sm"

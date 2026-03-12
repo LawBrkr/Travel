@@ -288,7 +288,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                     <a
                         id="btn-nav-whatsapp"
-                        href="https://wa.me/5215666663950?text=Hola,%20me%20interesa%20obtener%20información%20sobre%20los%20tours%20a%20Europa%20y%20Asia."
+                        href="https://wa.me/5215666673841?text=Hola,%20me%20interesa%20obtener%20información%20sobre%20los%20tours%20a%20Europa%20y%20Asia."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full cursor-pointer transition-all hover:scale-105 shadow-lg"

@@ -54,7 +54,7 @@ export default function Navbar() {
             {/* CTA */}
             <div>
                 <a
-                    href="https://wa.me/5215666663950"
+                    href="https://wa.me/5215666673841"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-bold px-4 py-2 md:px-6 md:py-2.5 rounded-full cursor-pointer transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
